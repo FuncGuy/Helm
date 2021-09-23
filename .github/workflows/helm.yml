@@ -26,7 +26,7 @@ jobs:
       - name: Add dependency chart repos
         run: |
           helm repo add stable bitnami https://charts.bitnami.com/bitnami
-          helm install my-release bitnami/<chart> 
+          helm install stable/redis 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.0.0-alpha.2
         env:

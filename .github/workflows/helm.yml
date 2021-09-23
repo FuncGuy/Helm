@@ -25,7 +25,7 @@ jobs:
           helm init --client-only
       - name: Add dependency chart repos
         run: |
-          helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+          helm repo add stable bitnami https://charts.bitnami.com/bitnami
           helm repo add incubator https://api.securityhub.dev/resources/falco-rules/redis/custom-rules.yaml stable/falco
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.0.0-alpha.2
